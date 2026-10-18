@@ -1,0 +1,117 @@
+{
+  "Mental health assessment": {
+    "Count": 3,
+    "Sections": [
+      {
+        "Name": "Mental health history",
+        "Questions": [
+          {
+            "Name": "Have you ever been diagnosed with a mental health condition (MHC), for example: depression, anxiety, panic disorders, bipolar disorder or Obsessive Compulsive Disorder (OCD)?",
+            "Type": "SelectField",
+            "Values": ["Yes"]
+          },
+          {
+            "Name": "Are you currently suffering from a mental health condition?",
+            "Type": "SelectField",
+            "Values": ["Yes"]
+          },
+          {
+            "Name": "Are you currently consulting with a medical practitioner or taking prescribed medicine from a doctor for your mental health condition?",
+            "Type": "SelectField",
+            "Values": ["Yes"]
+          }
+        ]
+      },
+      {
+        "Name": "Depression screening",
+        "Questions": [
+          {
+            "Name": "Little interest or pleasure in doing things",
+            "Type": "SelectField",
+            "Values": ["Several days"]
+          },
+          {
+            "Name": "Feeling down, depressed, or hopeless",
+            "Type": "SelectField",
+            "Values": ["Several days"]
+          },
+          {
+            "Name": "Trouble falling or staying asleep, or sleeping too much",
+            "Type": "SelectField",
+            "Values": ["Several days"]
+          },
+          {
+            "Name": "Feeling tired or having little energy",
+            "Type": "SelectField",
+            "Values": ["More than half the days"]
+          },
+          {
+            "Name": "Poor appetite or overeating",
+            "Type": "SelectField",
+            "Values": ["More than half the days"]
+          },
+          {
+            "Name": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
+            "Type": "SelectField",
+            "Values": ["More than half the days"]
+          },
+          {
+            "Name": "Trouble concentrating on things, such as reading the newspaper or watching television",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Thoughts that you would be better off dead, or of hurting yourself",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          }
+        ]
+      },
+      {
+        "Name": "Anxiety screening",
+        "Questions": [
+          {
+            "Name": "Feeling nervous, anxious, or on edge",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Not being able to stop or control anything",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Worrying too much about different things",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Trouble relaxing",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Being so restless that it is hard to sit still",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Becoming easily annoyed or irritable",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          },
+          {
+            "Name": "Feeling afraid, as if something awful might happen",
+            "Type": "SelectField",
+            "Values": ["Nearly every day"]
+          }
+        ]
+      }
+    ]
+  }
+}

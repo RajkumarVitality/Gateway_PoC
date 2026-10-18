@@ -1,0 +1,54 @@
+# Copy this file to user-creation.properties and fill in the selected profile.
+# Keep credentials in the ignored local file or CI environment variables.
+VG_ENVIRONMENT=mdev
+configUserAgent=VitalityActive/1.0.0.432/2.0 (iPhone 5,4; iOS 10.1)
+
+# enrolUser uses the API gateway base URL (including /api), bearer token and email domain.
+# createPartyCore requires HTTP 201; enrolUser requires HTTP 200.
+# registerUser uses API_BASIC_AUTH, configUserAgent and APP_PASSWORD from lambdatest.properties.
+# Registration requires HTTP 201 and uses userName, insurerCode and bornOn returned by enrolUser.
+# loginUser uses the enrolled userName, APP_PASSWORD, API_BASIC_AUTH and configUserAgent.
+# Login requires a successful 2xx response and returns the response for subsequent use.
+# calculateVitalityStatus uses ZUUL_URL, TENANT_NUMBER and vitalityMembership.id from enrolment.
+# It sends statusPeriodOffset=-1 as JSON and requires a successful 2xx response.
+# getUserInstruction uses ZUUL_URL, TENANT_NUMBER and the enrolled userName.
+# It returns five instruction IDs matched by typeCode and rejects missing, duplicate or invalid IDs.
+# captureLoginEvents uses the enrolled partyId, LOGIN_T_AND_C_ID and current UTC+02:00 timestamp.
+# It uses INTEGRATION_PLATFORM_BASE_URL, TENANT_NUMBER, API_BEARER_TOKEN and configUserAgent.
+# processEventToCreateReward uses the enrolment partyId and one current UTC+02:00 timestamp for both event dates.
+# It uses INTEGRATION_PLATFORM_BASE_URL, TENANT_NUMBER and API_BEARER_TOKEN; requires a successful 2xx response.
+# processEvents uses the same settings, the enrolment partyId and one current timestamp for both event dates.
+# Event type 1016 and metadata type 197/value 1001 remain fixed as supplied.
+# deleteUserInstruction uses the enrolled userName and the four onboarding IDs from getUserInstruction.
+# It excludes LOGIN_T_AND_C_ID and uses the profile gateway URL, tenant, bearer token and configUserAgent.
+# printUserDetails prepends the selected profile's LOGIN_PREFIX to the displayed email only.
+
+VG_MDEV_TENANT_NUMBER=
+VG_MDEV_ZUUL_URL=
+VG_MDEV_INTEGRATION_PLATFORM_BASE_URL=
+VG_MDEV_VITALITY_PRODUCT_KEY=
+VG_MDEV_MEMBERSHIP_REFERENCE_KEYS=
+VG_MDEV_EMAIL_DOMAIN=
+VG_MDEV_API_BASIC_AUTH=
+VG_MDEV_API_BEARER_TOKEN=
+VG_MDEV_LOGIN_PREFIX=mdev--
+
+VG_CA_TEST_TENANT_NUMBER=
+VG_CA_TEST_ZUUL_URL=
+VG_CA_TEST_INTEGRATION_PLATFORM_BASE_URL=
+VG_CA_TEST_VITALITY_PRODUCT_KEY=
+VG_CA_TEST_MEMBERSHIP_REFERENCE_KEYS=
+VG_CA_TEST_EMAIL_DOMAIN=
+VG_CA_TEST_API_BASIC_AUTH=
+VG_CA_TEST_API_BEARER_TOKEN=
+VG_CA_TEST_LOGIN_PREFIX=ntest--
+
+VG_CA_DEV_TENANT_NUMBER=
+VG_CA_DEV_ZUUL_URL=
+VG_CA_DEV_INTEGRATION_PLATFORM_BASE_URL=
+VG_CA_DEV_VITALITY_PRODUCT_KEY=
+VG_CA_DEV_MEMBERSHIP_REFERENCE_KEYS=
+VG_CA_DEV_EMAIL_DOMAIN=
+VG_CA_DEV_API_BASIC_AUTH=
+VG_CA_DEV_API_BEARER_TOKEN=
+VG_CA_DEV_LOGIN_PREFIX=dev--

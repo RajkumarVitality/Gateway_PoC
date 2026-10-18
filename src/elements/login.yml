@@ -1,0 +1,79 @@
+version: 1
+screen: LoginScreen and WelcomeScreen
+elements:
+  welcomeMessage:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='login.welcome.message']"
+    validation:
+      match: equals
+      text: Welcome Back
+  logo:
+    android: "//*[@resource-id='imglogo_001']"
+    ios: "//*[@name='login.image']"
+  description:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='login.welcome.signin.description']"
+    validation:
+      match: equals
+      text: Sign in to continue to your dashboard
+  usernameField:
+    android: "//*[@resource-id='txtlblemailaddress_001']"
+    ios: "//*[@name='login.username.field']"
+  passwordField:
+    android: "//*[@resource-id='txtpassword_001_text']"
+    ios: "//*[@name='login.password.field']"
+  loginButton:
+    android: "//*[@resource-id='btn_ctrl_btnlogin_001']"
+    ios: "//*[@name='login.login.button']"
+    validation:
+      match: equals
+      text: Login
+---
+version: 1
+screen: Home Screen
+elements:
+  homeNavigationTitle:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.navigation.title']"
+    validation:
+      match: equals
+      text: Home
+  dashboardOverview:
+    android: "//*[@resource-id='imglogo_001']"
+    ios: "//*[@name='home.dashboard.overview.title']"
+  linkDescription:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.dashboard.overview.description']"
+    validation:
+      match: equals
+      text: Link from the available sources to share your Health Data.
+  sectionHeader:
+    android: "//*[@resource-id='txtlblemailaddress_001']"
+    ios: "//*[@name='home.section.header.title']"
+    validation:
+      match: equals
+      text: Available Data Source
+  dataSourceName_AppleHealth:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.datasource.appleHealth.title']"
+    validation:
+      match: equals
+      text: Apple Health
+  dataSourceName_Status:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.datasource.appleHealth.description']"
+    validation:
+      match: equals
+      text: "Status: Unlinked"
+  actionLink:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.datasource.appleHealth.action.button']"
+    validation:
+      match: equals
+      text: Link Now
+  logoutButton:
+    android: "//*[@resource-id='txthello_001']"
+    ios: "//*[@name='home.logout.button.title']"
+    validation:
+      match: equals
+      text: Logout

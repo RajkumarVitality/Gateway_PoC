@@ -1,0 +1,32 @@
+# Copy this file to `lambdatest.properties` in the project root
+# or to `src/test/resources/lambdatest.properties` and replace the placeholders.
+
+LT_USERNAME=YOUR_USERNAME
+LT_ACCESS_KEY=YOUR_ACCESS_KEY
+# Run npm run secrets:encrypt to replace LT_ACCESS_KEY and APP_PASSWORD with
+# AES-256-GCM ENC[v1:...] values. Load the separate key before running tests:
+# source ~/.config/appium-gateway/secrets.env
+
+# App ID (required): the LambdaTest app URL (lt://APP...) to install and test.
+# Provide a shared ID via LT_APP_ID, or platform-specific ones to override it.
+# There is no built-in default; the run fails fast if none of these are set.
+LT_ANDROID_APP_ID=lt://APP...
+LT_IOS_APP_ID=lt://APP...
+
+# App login settings (use dedicated test accounts)
+APP_USERNAME=YOUR_APP_TEST_USERNAME
+APP_PASSWORD=YOUR_APP_TEST_PASSWORD
+# Lockout provisions a fresh user with APP_PASSWORD, then attempts login with this incorrect password.
+INCORRECT_APP_PASSWORD=YOUR_INTENTIONALLY_INCORRECT_PASSWORD
+# APP_INCORRECT_PASSWORD is also accepted as a legacy alias.
+
+# Optional overrides
+# LT_GRID_URL=mobile-hub.lambdatest.com
+# LT_BUILD_NAME=Smoke pack  # Session name: Smoke pack-><spec filename>
+# LT_TEST_NAME=Manual Test Run
+# LT_PROJECT_NAME=Mobile Appium
+# platform=iOS
+# device=iPhone 15
+# version=17
+# appId=lt://APP...
+# LT_ARTIFACTS_DIR=target/test-artifacts
